@@ -10,13 +10,13 @@ module FaqModule
         faqs = Faq.search(@query)
       elsif @action == "search_by_hashtag"
         faqs = []
-        Faqs.each do |faq|
+        Faq.all.each do |faq|
           faq.hashtags.each do |hashtag|
             faqs << faq if hashtag.name == @query
           end
         end
       else
-        faqs = Faqs.all
+        faqs = Faq.all
       end
 
       response = "*Perguntas e Respostas* \n\n"

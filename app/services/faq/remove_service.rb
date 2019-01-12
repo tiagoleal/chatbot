@@ -6,7 +6,7 @@ module FaqModule
     end
 
     def call
-      faq = Faqs.where(id: @id).last
+      faq = Faq.where(id: @id).last
       return "Questão inválida, verifique o Id" if faq == nil
 
       Faq.transaction do

@@ -1,9 +1,9 @@
 module FaqModule
   class CreateService
     def initialize(params)
-      @question = params["question-original"]
-      @answer = params["answer-original"]
-      @hashtags = params["hashtags-original"]
+      @question = params["question"]
+      @answer = params["answer"]
+      @hashtags = params["hashtags"]
     end
  
  
@@ -12,7 +12,7 @@ module FaqModule
       Faq.transaction do
         faq = Faq.create(question: @question, answer: @answer)
         @hashtags.split(/[\s,]+/).each do |hashtag|
-          faq.hashtags << @Hashtags.find_or_create_by(name: hashtag)
+          faq.hashtags << Hashtag.find_or_create_by(name: hashtag)
         end
       end
       "Criado com sucesso"
