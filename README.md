@@ -1,6 +1,6 @@
 <p align="center">
   
-   <img alt="Chat Bot" src="https://github.com/tiagoleal/chatbot/images/telegram_bot.png?raw=true" width="250">
+   <img alt="Chat Bot" src="https://github.com/tiagoleal/chatbot//blob/master/images/telegram_bot.png?raw=true" width="250">
   
 </p>
 <p align="center"> the Chatbot FAQ of questions and answers </p>
